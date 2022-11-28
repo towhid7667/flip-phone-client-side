@@ -4,41 +4,59 @@
         "title" : "Samsung S20",
         "description" : "Samsung Galaxy S20 comes with 6.2 inches Quad HD+ Dynamic AMOLED 2X screen. It has a punch-hole front camera design. The back camera is of triple 12+64+12 MP with PDAF, OIS, 3x hybrid optical zoom, telephoto, ultrawide etc. and up to 8K video recording. The front camera is of 10 Megapixel. Galaxy S20 comes with 4000 mAh battery with 25W fast charging. It has 8 GB RAM, up to 2.73 GHz octa-core CPU and Mali-G77 MP11 GPU. It is powered by a 7 nm+ Exynos 990 chipset. The device comes with 128 GB UFS 3.0 internal storage and shared MicroSD slot. There is an ultrasonic in-display fingerprint sensor in this phone.",
         "originalPrice" : "1000",
-        "dealPrice" : "600"
+        "dealPrice" : "600",
+        "sellerName" : "Mamun Shah",
+        "Location" : "Mirpur-01",
+        "used" : "2"
     },
     {
         "img" : "https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "title" : "Iphone 12",
         "description" : "iPhone 12, the new one in the iPhone 12 series was launched on October 13, 2020. The smartphone features an immersive 6.10-inch touchscreen display that has a resolution of 1170x2532 pixels at a pixel density of 460 pixels per inch (ppi). The dimensions of the mobile are 146.70 mm x 71.50 mm x 7.40 mm (height x width x thickness) and weighs around 164 grams. Further, the iPhone 12 features an IP68 rating for dust and water resistance. You can buy the phone in Black, Green, Red, Blue, and White colors. When you energize the ROG Phone 6 Diablo Immortal Edition with the power button, you’ll enter the hellish world of Diablo. Themed animations, live wallpapers, charging animations, awesome sound effects await you, along with customized Always-on Panel and incoming call notifications.",
         "originalPrice" : "2000",
-        "dealPrice" : "900"
+        "dealPrice" : "900",
+        "sellerName" : "Kalam Mia",
+        "Location" : "Agrabad",
+        "used" : "1"
     },
     {
         "img" : "https://images.pexels.com/photos/7915285/pexels-photo-7915285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "title" : "Rog Phone 6 ",
         "description" : "The ROG Phone 6 Diablo Immortal Edition features the Shield Blessing Aero Case, and a map of Sanctuary featuring hidden marks in invisible ink that can be revealed using Fahir’s Light. There’s also a uniquely crafted Immortality Ejector Pin fashioned after the game’s logo. Each accessory is an integral part of the Diablo-inspired worldview.",
         "originalPrice" : "3000",
-        "dealPrice" : "1200"
+        "dealPrice" : "1200",
+        "sellerName" : "Jamal Bhuiyan",
+        "Location" : "ShantiNagar",
+        "used" : "1"
     },
     {
         "img" : "https://images.pexels.com/photos/257923/pexels-photo-257923.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "title" : "Samsung Galaxy 11",
         "description" : "Samsung Galaxy S20 comes with 6.2 inches Quad HD+ Dynamic AMOLED 2X screen. It has a punch-hole front camera design. The back camera is of triple 12+64+12 MP with PDAF, OIS, 3x hybrid optical zoom, telephoto, ultrawide etc. and up to 8K video recording. The front camera is of 10 Megapixel. Galaxy S20 comes with 4000 mAh battery with 25W fast charging. It has 8 GB RAM, up to 2.73 GHz octa-core CPU and Mali-G77 MP11 GPU. It is powered by a 7 nm+ Exynos 990 chipset. The device comes with 128 GB UFS 3.0 internal storage and shared MicroSD slot. There is an ultrasonic in-display fingerprint sensor in this phone.",
         "originalPrice" : "1000",
-        "dealPrice" : "600"
+        "dealPrice" : "600",
+        "sellerName" : "Rashid Azad",
+        "Location" : "Razarbag",
+        "used" : "2"
     },
     {
         "img" : "https://images.pexels.com/photos/1038628/pexels-photo-1038628.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "title" : "Iphone 7",
         "description" : "iPhone 7, the new one in the iPhone 7 series was launched on October 13, 2020. The smartphone features an immersive 6.10-inch touchscreen display that has a resolution of 1170x2532 pixels at a pixel density of 460 pixels per inch (ppi). The dimensions of the mobile are 146.70 mm x 71.50 mm x 7.40 mm (height x width x thickness) and weighs around 164 grams. Further, the iPhone 7 features an IP68 rating for dust and water resistance. You can buy the phone in Black, Green, Red, Blue, and White colors. When you energize the ROG Phone 6 Diablo Immortal Edition with the power button, you’ll enter the hellish world of Diablo. Themed animations, live wallpapers, charging animations, awesome sound effects await you, along with customized Always-on Panel and incoming call notifications.",
         "originalPrice" : "600",
-        "dealPrice" : "300"
+        "dealPrice" : "300",
+        "sellerName" : "Kamrul Hasnat",
+        "Location" : "GEC More",
+        "used" : "1"
     },
     {
         "img" : "https://images.pexels.com/photos/4293307/pexels-photo-4293307.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "title" : "Rog Phone 5 ",
         "description" : "The ROG Phone 5 Diablo Immortal Edition features the Shield Blessing Aero Case, and a map of Sanctuary featuring hidden marks in invisible ink that can be revealed using Fahir’s Light. There’s also a uniquely crafted Immortality Ejector Pin fashioned after the game’s logo. Each accessory is an integral part of the Diablo-inspired worldview.",
         "originalPrice" : "800",
-        "dealPrice" : "450"
+        "dealPrice" : "450",
+        "sellerName" : "Akraam Hasan",
+        "Location" : "Mirpur-10",
+        "used" : "2"
     }
 ]
