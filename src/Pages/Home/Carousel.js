@@ -11,7 +11,6 @@ const Carousel = () => {
           infinite: true,
           slidesToShow: 2,
           slidesToScroll: 1,
-          autoplay: true,
           speed: 2000,
           autoplaySpeed: 2000,
           cssEase: "linear"
