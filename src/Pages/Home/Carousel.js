@@ -9,15 +9,42 @@ const Carousel = () => {
         const settings = {
           dots: true,
           infinite: true,
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
+          autoplay: true,
           speed: 2000,
-          autoplaySpeed: 2000,
-          cssEase: "linear"
+          autoplaySpeed: 5000,
+          cssEase: "linear",
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
         }
     
     return (
-        <div className='my-10 w-11/12 mx-auto' >
+        <div className='my-10 w-11/12 mx-auto overflow-hidden' >
         <Slider {...settings}>
           <div className='px-2'>
             <img  src="https://images.pexels.com/photos/248526/pexels-photo-248526.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
