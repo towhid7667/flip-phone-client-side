@@ -1,13 +1,13 @@
 import React from 'react';
 import BeastDeals from './BestDeal/BeastDeals';
-import Carousel from './Carousel';
+import CaroselItem from './Carousel/CaroselItem';
 import Categories from './Categories/Categories';
 import HomeHero from './HomeHero';
 
 const Home = () => {
     return (
         <div>
-            <Carousel></Carousel>
+            <CaroselItem></CaroselItem>
             <Categories></Categories>
             <BeastDeals></BeastDeals>
             <HomeHero></HomeHero>
