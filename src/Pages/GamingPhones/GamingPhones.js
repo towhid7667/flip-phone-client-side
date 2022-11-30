@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import AllCategories from '../Home/Categories/AllCategories';
 import Gamingphone from './Gamingphone';
 
 const GamingPhones = () => {
@@ -14,7 +15,9 @@ const GamingPhones = () => {
         {
             gamingphones.map(gamingphone => <Gamingphone key={gamingphone._id} gamingphone = {gamingphone}></Gamingphone>)
         }
+        <AllCategories></AllCategories>
         </div>
+
     </div>
     );
 };

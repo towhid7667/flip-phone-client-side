@@ -1,5 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import AllCategories from '../Home/Categories/AllCategories';
+import Categories from '../Home/Categories/Categories';
 import AndroidInfo from './AndroidInfo';
 
 const Android = () => {
@@ -14,7 +16,9 @@ const Android = () => {
             {
                 androids.map(android => <AndroidInfo key = {android._id} android = {android}></AndroidInfo>)
             }
+            <AllCategories></AllCategories>
             </div>
+        
         </div>
     );
 };
