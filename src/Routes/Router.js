@@ -7,6 +7,9 @@ import Main from './../Layout/Main';
 import SignUp from './../Pages/SignUp/SignUp';
 import AppleProducts from './../Pages/Apple/AppleProducts';
 import GamingPhones from './../Pages/GamingPhones/GamingPhones';
+import Dashboard from "../Pages/Dashboard/Dashboard";
+import DashboardLayout from "../Layout/DashboardLayout";
+import PrivateRoute from './PrivateRoute';
 
 export const router = createBrowserRouter([
     {
@@ -43,5 +46,13 @@ export const router = createBrowserRouter([
             },
         ]
 
+    },
+    {
+        path: '/dashboard',
+        element : <DashboardLayout></DashboardLayout>,
+        errorElement:<PrivateRoute><DisplayERROR></DisplayERROR></PrivateRoute>,
+        children: [
+
+        ]
     }
 ])
