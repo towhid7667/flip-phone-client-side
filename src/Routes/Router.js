@@ -10,6 +10,8 @@ import GamingPhones from './../Pages/GamingPhones/GamingPhones';
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import DashboardLayout from "../Layout/DashboardLayout";
 import PrivateRoute from './PrivateRoute';
+import AdminRoute from "./AdminRoute";
+import AllUsers from './../Pages/Dashboard/Allusers';
 
 export const router = createBrowserRouter([
     {
@@ -52,7 +54,10 @@ export const router = createBrowserRouter([
         element : <DashboardLayout></DashboardLayout>,
         errorElement:<PrivateRoute><DisplayERROR></DisplayERROR></PrivateRoute>,
         children: [
-
+            {
+                path : '/dashboard/allusers',
+                element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
+            }
         ]
     }
 ])
