@@ -5,6 +5,7 @@ import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Main from './../Layout/Main';
 import SignUp from './../Pages/SignUp/SignUp';
+import AppleProducts from './../Pages/Apple/AppleProducts';
 
 export const router = createBrowserRouter([
     {
@@ -28,6 +29,11 @@ export const router = createBrowserRouter([
                 path : '/androids',
                 element : <Android></Android>,
                 loader : () => fetch('https://flip-phone-server-towhid7667.vercel.app/androids')
+            },
+            {
+                path : '/appleproducts',
+                element : <AppleProducts></AppleProducts>,
+                loader : () => fetch('https://flip-phone-server-towhid7667.vercel.app/appleproducts')
             },
         ]
 
