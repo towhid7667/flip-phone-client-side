@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Carousel = ({carousel}) => {
     const {id, image, prev,next} = carousel;
@@ -14,7 +15,7 @@ const Carousel = ({carousel}) => {
           <p className='text-[10px] lg:text-xl md:text-1xl text-center text-white'>Flip Phone is one of the cheap and best online shop in Dhaka where you can find different kind of Original mobile phones like Samsung, Apple, LG, Symphony, Sony, HTC, Oppo etc </p>
         </div>
         <div className="absolute flex justify-between transform -translate-y-1/2 -translate-x-1/2 left-1/2 top-3/4 my-3 lg:my-0 md:my-0 pb-0 lg:pb-40 md:pb-28">
-          <button className='btn btn-primary text-white'>Explore</button>
+          <Link to='/signup'><button className='btn btn-primary text-white'>Get Started</button></Link>
         </div>
         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <a href={`#slide${prev}`} className="btn btn-primary">❮</a> 

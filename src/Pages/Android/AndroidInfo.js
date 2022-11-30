@@ -1,9 +1,10 @@
-import React from "react";
+import React from 'react';
 
-const BestDeal = ({deal}) => {
-    const {img, description, title, originalPrice, dealPrice} = deal;
-  return (
-    <div className="card w-80 h-[450px] bg-base-100 shadow-xl">
+const AndroidInfo = ({android}) => {
+    const {img, description, title, originalPrice, dealPrice} = android;
+
+    return (
+        <div className="card w-80 h-[450px] bg-base-100 shadow-xl">
       <figure>
         <img src={img} alt="" />
       </figure>
@@ -23,7 +24,7 @@ const BestDeal = ({deal}) => {
         </div>
       </div>
     </div>
-  );
+    );
 };
 
-export default BestDeal;
+export default AndroidInfo;

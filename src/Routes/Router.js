@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import DisplayERROR from "../Components/Shared/DisplayERROR/DisplayERROR";
+import Android from "../Pages/Android/Android";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Main from './../Layout/Main';
@@ -22,6 +23,11 @@ export const router = createBrowserRouter([
             {
                 path : '/login',
                 element : <Login></Login>
+            },
+            {
+                path : '/androids',
+                element : <Android></Android>,
+                loader : () => fetch('https://flip-phone-server-towhid7667.vercel.app/androids')
             },
         ]
 

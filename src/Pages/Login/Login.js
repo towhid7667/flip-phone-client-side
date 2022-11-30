@@ -59,7 +59,7 @@ const Login = () => {
          
 
           {/* <p>{data}</p> */}
-          <input type="submit" value='LOGIN' className="input input-bordered w-full bg-accent text-white font-bold mt-3 hover:bg-slate-800"/>
+          <input type="submit" value='LOGIN' className="input input-bordered w-full bg-primary text-white font-bold mt-3 hover:bg-lime-500"/>
         </form>
         <div>
           {
