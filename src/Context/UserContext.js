@@ -1,6 +1,8 @@
 import React, { createContext, useEffect, useState } from 'react';
 import app from './../firebase/firebase.init';
 import {createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile} from 'firebase/auth'
+// import { useQuery } from '@tanstack/react-query';
+// import Loading from './../Components/Loading/Loading';
 
 export const AuthContext = createContext();
 const auth = getAuth(app)
@@ -10,6 +12,17 @@ const UserContext = ({children}) => {
 
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
+    // const [userData, setUserData] =  useState([])
+
+
+    // useEffect(()=>{
+    //     fetch(`https://flip-phone-server-towhid7667.vercel.app/users?email=${user.email}`)
+    //     .then(res => res.json())
+    //     .then(data => setUserData(data))
+    // },[])
+
+   
+
 
     const  createUser = (email, password) =>{
         setLoading(true)
@@ -37,7 +50,21 @@ const UserContext = ({children}) => {
             return ()=> unsubscribe();
         }, [])
     
-    
+        // const {data : userData = [], isLoading} = useQuery({
+        //     queryKey : ['userData'],
+        //     queryFn: async () => {
+        //         const res = await fetch(`https://flip-phone-server-towhid7667.vercel.app/users?email=${user.email}`, {
+        //             headers:{
+        //                 authorization: `bearer ${localStorage.getItem('accessToken')}`
+        //             }
+        //         })
+        //         const data = await res.json();
+        //         return data
+        //     }
+        // })
+        // if(isLoading){
+        //     return <Loading></Loading>
+        // }
     
         const authInfo = {
             createUser,
@@ -45,7 +72,8 @@ const UserContext = ({children}) => {
             user,
             logOut,
             updateUser,
-            loading
+            loading,
+            
         }
     return (
         <AuthContext.Provider value={authInfo}>
