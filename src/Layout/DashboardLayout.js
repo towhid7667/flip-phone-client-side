@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Outlet, Link } from "react-router-dom";
 import Footer from "../Components/Shared/Footer/Footer";
-import Navbar from "../Components/Shared/Navbar/Navbar";
+import NavbarDash from "../Components/Shared/Navbar/NavbarDash";
 import { AuthContext } from "./../Context/UserContext";
 import useAdmin from "./../Hooks/useAdmin";
 import useBuyer from "./../Hooks/useBuyer";
@@ -14,19 +14,18 @@ const DashboardLayout = () => {
   const [isSeller] = useSeller(user?.email);
   return (
     <div>
-      <Navbar></Navbar>
+     <NavbarDash></NavbarDash>
 
-      <div className="drawer drawer-mobile my-10">
-        <input id="doc-drawer" type="checkbox" className="drawer-toggle" />
+      <div className="drawer drawer-mobile lg:pt-5 md:pt-0 pt-0">
+        <input id="dash-drawer" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col ">
           <Outlet />
         </div>
         <div className="drawer-side">
-          <label htmlFor="doc-drawer" className="drawer-overlay"></label>
+          <label htmlFor="dash-drawer" className="drawer-overlay"></label>
           <ul className="menu p-4 w-80 bg-base-100 text-base-content">
             {isAdmin && (
               <li>
-                {" "}
                 <Link to="/dashboard/allusers">All users</Link>
               </li>
             )}

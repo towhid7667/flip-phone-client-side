@@ -44,7 +44,7 @@ const carouselData = [
 
 const CaroselItem = () => {
     return (
-        <div className="carousel w-10/12 max-w-screen-xl mx-auto">
+        <div className="carousel w-10/12 max-w-screen-xl mx-auto lg:pt-0 md:pt-16 pt-16">
         {
              carouselData.map(carousel => <Carousel key={carousel.id} carousel = {carousel}></Carousel>)
         }
