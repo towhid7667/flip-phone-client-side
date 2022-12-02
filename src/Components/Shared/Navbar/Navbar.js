@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from './../../../Context/UserContext';
+import useBuyer from './../../../Hooks/useBuyer';
 
 const Navbar = () => {
   const {user, logOut} = useContext(AuthContext)
+  const [isBuyer] = useBuyer(user?.email)
 
   const handleLogOut = () =>{
     logOut()
@@ -18,7 +20,13 @@ const Navbar = () => {
       <div className="flex-none">
         {
           user?.uid?<>
-                <Link to ='/dashboard'><button className="btn btn-outline mr-3">DashBoard</button></Link>
+          {
+            isBuyer && <Link to ='/dashboard'><button className="btn btn-outline mr-3">Order List</button></Link>
+          }
+          {
+            !isBuyer &&  <Link to ='/dashboard'><button className="btn btn-outline mr-3">DashBoard</button></Link>
+          }
+               
                 <button onClick={handleLogOut} className="btn bg-primary text-white border-0">Log out</button>
           </>
           :

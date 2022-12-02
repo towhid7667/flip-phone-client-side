@@ -13,7 +13,7 @@ const BestDeal = ({deal}) => {
           {title}
           <div className="badge badge-secondary">Best</div>
         </h2>
-        <p className="text-center">{description.slice(0,100)}</p>
+        <p className="text-center">{description.slice(0,150)}...</p>
         <div className="text-center">
           <p className=" font-semibold px-2 py-1">Original Price: ${originalPrice}</p>
           <p className=" font-semibold  px-2 py-1">Best Price: ${dealPrice}</p>

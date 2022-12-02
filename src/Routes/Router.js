@@ -14,6 +14,7 @@ import AdminRoute from "./AdminRoute";
 import AllUsers from './../Pages/Dashboard/Allusers';
 import SellerRoute from './SellerRoute';
 import UploadItem from './../Pages/Dashboard/UploadItem';
+import ProductsDetails from "../Pages/ProductDetails/ProductsDetails";
 
 export const router = createBrowserRouter([
     {
@@ -47,6 +48,11 @@ export const router = createBrowserRouter([
                 path : '/gamingphones',
                 element : <GamingPhones></GamingPhones>,
                 loader : () => fetch('https://flip-phone-server-towhid7667.vercel.app/gamingphones')
+            },
+            {
+                path : '/productdetails/:id',
+                element : <PrivateRoute><ProductsDetails></ProductsDetails></PrivateRoute>,
+                loader : ({params}) => fetch(`https://flip-phone-server-towhid7667.vercel.app/allproducts/${params.id}`)
             },
         ]
 
