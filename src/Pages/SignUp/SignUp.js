@@ -141,10 +141,8 @@ const SignUp = () => {
               <span className="font-semibold text-primary">Please Log in</span>
             </Link>
           </p>
-          <div className="divider">OR</div>
-          <button className="btn btn-secondary w-full">
-            SIGN IN WITH GOOGLE
-          </button>
+          
+          
         </div>
       </div>
 

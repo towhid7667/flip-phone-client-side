@@ -1,6 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react';
 import app from './../firebase/firebase.init';
-import {createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile} from 'firebase/auth'
+import {createUserWithEmailAndPassword, getAuth,  onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile} from 'firebase/auth'
 // import { useQuery } from '@tanstack/react-query';
 // import Loading from './../Components/Loading/Loading';
 
@@ -21,8 +21,10 @@ const UserContext = ({children}) => {
     //     .then(data => setUserData(data))
     // },[])
 
-   
-
+    const googleSignIN = (provider) =>{
+        setLoading(true);
+        return signInWithPopup(auth, provider);
+    }
 
     const  createUser = (email, password) =>{
         setLoading(true)
@@ -32,6 +34,7 @@ const UserContext = ({children}) => {
         setLoading(true)
         return signInWithEmailAndPassword(auth, email, password);
     }
+    
     
     const logOut = () => {
         setLoading(true)
@@ -73,6 +76,7 @@ const UserContext = ({children}) => {
             logOut,
             updateUser,
             loading,
+            googleSignIN
             
         }
     return (

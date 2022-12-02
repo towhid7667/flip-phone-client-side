@@ -3,11 +3,13 @@ import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useToken from './../../Hooks/UseToken';
 import { AuthContext } from './../../Context/UserContext';
+import { GoogleAuthProvider } from "firebase/auth";
+import { toast } from 'react-hot-toast';
 
 
 const Login = () => {
   const { register, formState: { errors }, handleSubmit } = useForm();
-  const {signIn} = useContext(AuthContext);
+  const {signIn,googleSignIN} = useContext(AuthContext);
   const [loginError, setLoginError] = useState('')
   const [loginUserEmail, setLoginUserEmail] = useState('')
   const [token] = useToken(loginUserEmail)
@@ -16,6 +18,28 @@ const Login = () => {
 
 
   const from = location.state?.from?.pathname || '/';
+
+
+  const handlegoogleSignIn = event => {
+    event.preventDefault();
+    const provider = new GoogleAuthProvider()
+    googleSignIN(provider)
+    .then(result => {
+      const user = result.user;
+      console.log(user);
+      setLoginError("");
+        if (user.emailVerified) {
+          navigate(from, { replace: true });
+        } else {
+          toast.error('please verify your email')
+        }
+    })
+    .catch((error) => setLoginError(error.message))
+    .finally(() => {
+        
+      });
+    }
+
   
   if(token){
     navigate(from, { replace: true });
@@ -68,7 +92,7 @@ const Login = () => {
         </div>
         <p className="text-center text-1xl">Don't Have Account? <Link to='/signup'><span className="font-semibold text-primary hover:text-secondary">Create an account</span></Link></p>
         <div className="divider">OR</div>
-        <button className="btn btn-outline w-full">SIGN IN WITH GOOGLE</button>
+        <button onClick={handlegoogleSignIn} className="btn btn-outline w-full">SIGN IN WITH GOOGLE</button>
       </div>
     </div>
     <img className='xl:w-11/12 w-9/12' src="https://images.pexels.com/photos/4350208/pexels-photo-4350208.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
