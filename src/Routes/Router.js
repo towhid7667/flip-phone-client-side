@@ -18,6 +18,7 @@ import ProductsDetails from "../Pages/ProductDetails/ProductsDetails";
 import OrderList from './../Pages/OrderList/OrderList';
 import BuyerRoute from './BuyerRoute';
 import SellerOrder from './../Pages/SellerOrder/SellerOrder';
+import Blogs from "../Pages/Blogs/Blogs";
 
 
 export const router = createBrowserRouter([
@@ -37,6 +38,10 @@ export const router = createBrowserRouter([
             {
                 path : '/login',
                 element : <Login></Login>
+            },
+            {
+                path : '/blogs',
+                element : <Blogs></Blogs>
             },
             {
                 path : '/androids',
