@@ -7,7 +7,7 @@ import Main from './../Layout/Main';
 import SignUp from './../Pages/SignUp/SignUp';
 import AppleProducts from './../Pages/Apple/AppleProducts';
 import GamingPhones from './../Pages/GamingPhones/GamingPhones';
-import Dashboard from "../Pages/Dashboard/Dashboard";
+
 import DashboardLayout from "../Layout/DashboardLayout";
 import PrivateRoute from './PrivateRoute';
 import AdminRoute from "./AdminRoute";
@@ -15,6 +15,10 @@ import AllUsers from './../Pages/Dashboard/Allusers';
 import SellerRoute from './SellerRoute';
 import UploadItem from './../Pages/Dashboard/UploadItem';
 import ProductsDetails from "../Pages/ProductDetails/ProductsDetails";
+import OrderList from './../Pages/OrderList/OrderList';
+import BuyerRoute from './BuyerRoute';
+import SellerOrder from './../Pages/SellerOrder/SellerOrder';
+
 
 export const router = createBrowserRouter([
     {
@@ -54,6 +58,11 @@ export const router = createBrowserRouter([
                 element : <PrivateRoute><ProductsDetails></ProductsDetails></PrivateRoute>,
                 loader : ({params}) => fetch(`https://flip-phone-server-towhid7667.vercel.app/allproducts/${params.id}`)
             },
+            {
+                path : '/orderlist',
+                element : <BuyerRoute><OrderList></OrderList></BuyerRoute>,
+                loader : () => fetch("https://flip-phone-server-towhid7667.vercel.app/orderlist")
+            },
         ]
 
     },
@@ -70,6 +79,16 @@ export const router = createBrowserRouter([
                 path : '/dashboard/uploadItem',
                 element: <SellerRoute><UploadItem></UploadItem></SellerRoute>
             },
+            {
+                path : '/dashboard/sellerorder/:name',
+                element: <SellerRoute><SellerOrder></SellerOrder></SellerRoute>,
+                loader: ({params}) => fetch(`https://flip-phone-server-towhid7667.vercel.app/orderlist/${params.name}`)
+            },
+            // {
+            //     path : '/dashboard/selleritem/:name',
+            //     element: <SellerRoute><SellerItem></SellerItem></SellerRoute>,
+            //     loader: ({params})=> fetch(`https://flip-phone-server-towhid7667.vercel.app/allproducts/${params.name}`)
+            // },
 
         ]
     }

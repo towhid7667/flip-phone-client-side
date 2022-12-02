@@ -9,7 +9,7 @@ const BeastDeals = () => {
     const [deals, setdeals] = useState([]);
 
     useEffect(() => {
-        fetch('https://flip-phone-server-towhid7667.vercel.app/bestDeals')
+        fetch('https://flip-phone-server-towhid7667.vercel.app/allproducts/bestdeal')
         .then(res => res.json())
         .then(data => setdeals(data))
     }, [])

@@ -35,7 +35,8 @@ const UploadItem = () => {
                 sellerName: data.sellerName,
                 Location: data.location,
                 used : data.used,
-                category : data.category
+                category : data.category,
+                advertisement : data.advertisement
                 
               };
     
@@ -176,7 +177,7 @@ const UploadItem = () => {
           <span className="label-text">Category</span>
         </label>
         <select
-          {...register("category")}
+          {...register("category", { required: "Photo is required" })}
           className="select select-bordered w-full "
         >
            <option>Apple</option>
@@ -195,6 +196,19 @@ const UploadItem = () => {
         {errors.photo && (
           <p className="text-red-600">{errors.photo?.message}</p>
         )}
+
+<label className="label">
+          <span className="label-text">Advertisement</span>
+        </label>
+        <select
+          {...register("advertisement")}
+          className="select select-bordered w-full "
+        >
+           <option>Yes</option>
+              <option>No</option>
+        </select>
+
+        
         <input
           type="submit"
           value="Add Product"

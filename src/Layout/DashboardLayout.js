@@ -1,4 +1,5 @@
-import React, { useContext } from "react";
+
+import React, { useContext, useEffect, useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 import Footer from "../Components/Shared/Footer/Footer";
 import NavbarDash from "../Components/Shared/Navbar/NavbarDash";
@@ -12,6 +13,13 @@ const DashboardLayout = () => {
   const [isAdmin] = useAdmin(user?.email);
   const [isBuyer] = useBuyer(user?.email);
   const [isSeller] = useSeller(user?.email);
+  const [userData, setUserData] = useState({});
+
+  useEffect(()=>{
+    fetch(`https://flip-phone-server-towhid7667.vercel.app/users/${user?.email}`)
+    .then(res => res.json() )
+    .then(data => setUserData(data))
+  }, [user])
   return (
     <div>
      <NavbarDash></NavbarDash>
@@ -37,7 +45,7 @@ const DashboardLayout = () => {
             {isSeller && (
               <>
                 <li>
-                  <Link to="/dashboard/sellerorderList">My Orders</Link>
+                  <Link to={`/dashboard/sellerorder/${userData.name}`}>My Orders</Link>
                 </li>
                 <li>
                   <Link to="/dashboard/uploadItem">Upload Item</Link>

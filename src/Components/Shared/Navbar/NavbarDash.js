@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { AuthContext } from './../../../Context/UserContext';
 import useBuyer from './../../../Hooks/useBuyer';
-import {FaRegUserCircle} from 'react-icons/fa'
 import { Link } from 'react-router-dom';
 
 const NavbarDash = () => {
@@ -42,7 +41,7 @@ const NavbarDash = () => {
           {
             user?.uid?<>
             {
-              isBuyer && <Link to ='/orderlist'><button className="btn btn-outline ml-24 lg:ml-0 md:ml-0 lg:w-5/12 md:w-4/12 w-4/12">Order List</button></Link>
+              isBuyer && <Link to ='/orderlist'><button className="btn btn-outline ml-24 lg:ml-0 md:ml-0 lg:w-9/12 md:w-4/12 w-4/12">Order List</button></Link>
             }
             {
               !isBuyer &&  <Link to ='/dashboard'><button className="btn btn-outline ml-16 lg:ml-0 md:ml-0 lg:w-10/12 md:w-10/12 w-6/12">DashBoard</button></Link>
