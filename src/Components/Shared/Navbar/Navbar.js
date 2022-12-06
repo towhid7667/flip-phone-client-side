@@ -26,7 +26,7 @@ const Navbar = () => {
             isBuyer && <Link to ='/orderlist'><button className="btn btn-outline ml-24 lg:ml-0 md:ml-0 lg:w-11/12 md:w-4/12 w-4/12">Order List</button></Link>
           }
           {
-            !isBuyer &&  <Link to ='/dashboard'><button className="btn btn-outline ml-16 lg:ml-0 md:ml-0 lg:w-10/12 md:w-3/12 w-6/12">DashBoard</button></Link>
+            !isBuyer &&  <Link to ='/dashboard'><button className="btn btn-outline ml-16 lg:ml-0 md:ml-0 lg:w-10/12 md:w-7/12 w-6/12">DashBoard</button></Link>
           }
                
            <button onClick={handleLogOut} className="btn bg-primary mr-5 lg:w-4/12 md:w-3/12 w-2/12 text-white border-0">Log out</button>
