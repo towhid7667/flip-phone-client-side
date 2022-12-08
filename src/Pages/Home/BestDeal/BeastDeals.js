@@ -75,7 +75,7 @@ const BeastDeals = () => {
           ]
       }
     return (
-        <div className='w-11/12 md:w-11/12 lg:w-10/12 mx-auto my-10  bg-light overflow-hidden' >
+        <div className='w-11/12 md:w-11/12 lg:w-10/12 2xl:w-8/12 mx-auto my-10  bg-light overflow-hidden' >
             <h2 className='text-2xl flex justify-center font-bold'>Best Deals</h2>
               <Slider {...settings}>
                
